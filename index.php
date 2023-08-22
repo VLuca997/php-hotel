@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- TITOLO PAGE -->
-    <title>Template</title>
+    <title>HOTEL</title>
 
     <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -70,12 +70,13 @@
             ],
     
         ];
+        // PRINT DI TUTTI I DATI FORNITI DALL'ARRAY
         foreach ($hotels as $hotel){
-            echo "<h2>{$hotel['name']}</h2>";
-            echo "<p>{$hotel['description']}</p>";
+            echo "<h2>" . $hotel['name'] . "</h2>";
+            echo "<p>" . $hotel['description'] . "</p>";
             echo "<p>Parcheggio: " . ($hotel['parking'] ? 'Si' : 'No') . "</p>";
-            echo "<p>Voto: {$hotel['vote']}</p>";
-            echo "<p>Distanza dal centro: {$hotel['distance_to_center']} km</p>";
+            echo "<p>Voto: " . $hotel['vote'] . "</p>";
+            echo "<p>Distanza dal centro: " . $hotel['distance_to_center'] . " km</p>";
             echo "<hr>";
         }
 
@@ -83,6 +84,7 @@
 
 
     ?>
+    <!-- PRINT IN TABELLA DEI DATI FORNITI DALL'ARRAY -->
     <table class="table table-dark table-hover container">
         <thead>
             <tr>

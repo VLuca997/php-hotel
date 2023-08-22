@@ -70,6 +70,18 @@
             ],
     
         ];
+        foreach ($hotels as $hotel){
+            echo "<h2>{$hotel['name']}</h2>";
+            echo "<p>{$hotel['description']}</p>";
+            echo "<p>Parcheggio: " . ($hotel['parking'] ? 'Si' : 'No') . "</p>";
+            echo "<p>Voto: {$hotel['vote']}</p>";
+            echo "<p>Distanza dal centro: {$hotel['distance_to_center']} km</p>";
+            echo "<hr>";
+        }
+
+
+
+
     ?>
 
 

@@ -83,7 +83,28 @@
 
 
     ?>
-
+    <table class="table table-dark table-hover container">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrizione</th>
+                <th>Parcheggio</th>
+                <th>Voto</th>
+                <th>Distanza Dal Centro</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($hotels as $hotel){ ?>
+                <tr>
+                    <td><?= $hotel['name'] ?></td>
+                    <td><?= $hotel['description'] ?></td>
+                    <td><?= $hotel['parking'] ? 'Si' : 'No' ?></td>
+                    <td><?= $hotel['vote'] ?></td>
+                    <td><?= $hotel['distance_to_center'] ?> km</td>
+                </tr>
+            <?php } ?> 
+        </tbody>
+    </table>
 
 
 
